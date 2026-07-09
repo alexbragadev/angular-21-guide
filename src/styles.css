@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+/* Tailwind is available but this Angular setup is using component CSS for layout stability */
+html, body {
+  margin: 0;
+  background-color: white;
+  font-family: Arial, sans-serif;
+}
