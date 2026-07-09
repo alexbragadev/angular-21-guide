@@ -1,7 +1,7 @@
 <p-breadcrumb class="max-w-full" [model]="items"/>
 <div class="wrapper">
   <div class="image-container">
-    <div class="image-item">
+    <div class="image-item" *ngIf="!showImage; else imageContent">
       <h3>Forest</h3>
       <p-image
         src="https://images.pexels.com/photos/14111238/pexels-photo-14111238.jpeg"
@@ -10,6 +10,16 @@
       />
     </div>
 
+    <ng-template #imageContent>
+      <div class="image-item">
+        <h3>Ice</h3>
+        <p-image
+          src="https://images.pexels.com/photos/2575002/pexels-photo-2575002.jpeg"
+          alt="Image"
+          width="300"
+        />
+      </div>
+    </ng-template>
     <div class="image-item">
       <h3>Ocean</h3>
       <p-image
