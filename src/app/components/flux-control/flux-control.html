@@ -1,7 +1,9 @@
 <p-breadcrumb class="max-w-full" [model]="items"/>
 <div class="wrapper">
+  <p-panel header="If and Else" style="background-color: #000;">
   <div class="image-container">
-    <div class="image-item" *ngIf="!showImage; else imageContent">
+    @if (!showImage) {
+    <div class="image-item">
       <h3>Forest</h3>
       <p-image
         src="https://images.pexels.com/photos/14111238/pexels-photo-14111238.jpeg"
@@ -9,8 +11,7 @@
         width="300"
       />
     </div>
-
-    <ng-template #imageContent>
+  } @else {
       <div class="image-item">
         <h3>Ice</h3>
         <p-image
@@ -19,7 +20,7 @@
           width="300"
         />
       </div>
-    </ng-template>
+  }
     <div class="image-item">
       <h3>Ocean</h3>
       <p-image
@@ -38,4 +39,55 @@
       />
     </div>
   </div>
+  </p-panel>
+  <p-panel header="For Loop" style="background-color: #c234;">
+    <div class="image-container">
+      @for (image of imageItems; track image.id) {
+        <div class="image-item">
+          <h3>{{ image.title}}</h3>
+          <p-image
+            src="{{ image.imageUrl }}"
+            alt="Image"
+            width="220"
+          />
+        </div>
+      }
+    </div>
+  </p-panel>
+  <p-panel header="Switch Case" style="background-color: #1D67DB;">
+    <div class="image-container">
+      @switch (selectedImage) {
+        @case ('forest') {
+          <div class="image-item">
+            <h3>Forest</h3>
+            <p-image
+              src="https://images.pexels.com/photos/14111238/pexels-photo-14111238.jpeg"
+              alt="Image"
+              width="300"
+            />
+          </div>
+        }
+        @case ('ice') {
+          <div class="image-item">
+            <h3>Ice</h3>
+            <p-image
+              src="https://images.pexels.com/photos/2575002/pexels-photo-2575002.jpeg"
+              alt="Image"
+              width="930"
+            />
+          </div>
+        }
+        @default {
+          <div class="image-item">
+            <h3>Ocean</h3>
+            <p-image
+              src="https://images.pexels.com/photos/18027832/pexels-photo-18027832.jpeg"
+              alt="Image"
+              width="300"
+            />
+          </div>
+        }
+      }
+    </div>
+  </p-panel>
 </div>
