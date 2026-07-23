@@ -1,0 +1,26 @@
+.home-container {
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 1rem;
+}
+
+.home-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.personal-info p-floatLabel {
+  display: block;
+  margin-bottom: 1.5rem;
+  margin-left: 2rem;
+}
+
+.personal-info p-button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-left: 2rem;
+}

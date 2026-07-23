@@ -1,1 +1,30 @@
-<p-breadcrumb class="max-w-full" [model]="items"/>
+<p-breadcrumb class="max-w-full" [model]="items" />
+<div class="home-container">
+  <div class="home-buttons">
+    <p style="color: #000">Writable signal to readonly: {{ state.count() }}</p>
+    <div class="card" style="display: contents">
+      <p-button
+        label="Increment"
+        severity="success"
+        [raised]="true"
+        (onClick)="state.increment()"
+      />
+      <p-button label="Decrement" severity="danger" [raised]="true" (onClick)="state.decrement()" />
+    </div>
+  </div>
+</div>
+
+<div class="personal-info">
+  <p style="color: #000; margin-left: 1rem; margin-bottom: 1.5rem">
+    Computed() example: {{ state.person_information() }}
+  </p>
+  <p-floatLabel>
+    <input pInputText id="username" [(ngModel)]="name" />
+    <label for="username">Username</label>
+  </p-floatLabel>
+  <p-floatLabel>
+    <input pInputText id="country" [(ngModel)]="country" />
+    <label for="country">Country</label>
+  </p-floatLabel>
+  <p-button label="Enviar" severity="info" [raised]="true" (onClick)="sendPersonalInfo()" />
+</div>
