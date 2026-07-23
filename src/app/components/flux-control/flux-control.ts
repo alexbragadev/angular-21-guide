@@ -14,8 +14,8 @@ import { CommonModule } from '@angular/common';
 export class FluxControlComponent {
 
   public items = [
-    { label: 'Home', url: './' },
-    { label: 'Flux Control', url: '' }
+    { label: 'Home', url: './', target: '_self' },
+    { label: 'Flux Control', url: './flux-control', target: '_self' }
   ];
 
   public selectedImage = 'ice';

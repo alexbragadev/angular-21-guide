@@ -15,7 +15,7 @@ export class Home {
   }
 
   public items = [
-    { label: 'Home', url: '/' }
+    { label: 'Home', url: '/', target: '_self' }
   ];
 
 
