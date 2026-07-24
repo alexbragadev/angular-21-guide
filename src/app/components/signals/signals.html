@@ -28,3 +28,19 @@
   </p-floatLabel>
   <p-button label="Enviar" severity="info" [raised]="true" (onClick)="sendPersonalInfo()" />
 </div>
+
+<div class="notas_aluno">
+  <p style="color: #000; margin-left: 1rem; margin-bottom: 1.5rem">
+    Notas alunos, Effect() : {{ state.media() }}
+  </p>
+  @if (state.enviarAlerta()) {
+    <p-message class="message" severity="error">Aluno fora da média</p-message>
+  } @else {
+    <p-message class="message" severity="info">Aluno dentro da média</p-message>
+  }
+
+  <div id="input-container">
+    <input pInputText type="number" [(ngModel)]="novaNota" />
+    <p-button label="Adicionar Nota" severity="info" [raised]="true" (onClick)="adicionar()" />
+  </div>
+</div>

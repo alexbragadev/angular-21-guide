@@ -24,3 +24,30 @@
   margin-top: 0.5rem;
   margin-left: 2rem;
 }
+
+.notas_aluno {
+  margin-top: 2rem;
+  width: 35%;
+}
+.notas_aluno > * {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+.notas_aluno p {
+  margin: 0 0 0.75rem 1rem;
+  color: #000;
+}
+.notas_aluno .message {
+  margin-left: 1rem;
+}
+#input-container {
+  display: flex;
+  align-items: center;
+}
+.notas_aluno input[pInputText] {
+  margin-left: 1rem;
+  width: 20rem;
+}
+.notas_aluno p-button {
+  margin-left: 1rem;
+}
